@@ -1,0 +1,17 @@
+N = input()
+S = input()
+N = N.split()
+S = S.split()
+n= int(N[0])
+s = int(N[1])
+arr = list()
+a = list()
+for i in range(s):
+    arr.append(int(S[i]))
+for i in range(s,0,-1):
+    if(arr[i-1]<n):
+        a.append(i-1)
+        n = n-arr[i-1]
+print(len(a))
+for i in range(len(a),0,-1):
+    print(a[i-1],end=" ")
